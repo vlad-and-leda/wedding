@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Влад & Леда</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Klee+One&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+      <div class="typing-container">
+        <div class="heart-animation">❤</div>
+        <div class="typing">у нас свадьба</div>
+      </div>
+    </div>
+    <div class="container main-content hidden flex flex-col gap-22" id="main-content">
+
+      <section data-aos="zoom-in" data-aos-duration="3000" class="flex justify-end hachi-maru-pop-regular" style="
+      position: relative;
+      width: 100%;">
+        <div class="polaroid-wrapper left-photo-animation" style="left: -10px; position: absolute; max-width: 350px; min-width: 184px;">
+          <div style="z-index: 10;">
+            <img class="photo" src="polaroid.png" alt="Your Photo">
+          </div>
+          <div class="photo-wrapper">
+            <img class="photo" src="vlad.jpg" alt="Your Photo">
+          </div>
+          <div class="photo-title"> Влад</div>
+        </div>
+        <div class="polaroid-wrapper right-photo-animation" style="position: relative; max-width: 350px; min-width: 184px; margin-right: -10px;">
+          <div style="z-index: 10;">
+            <img class="photo" src="polaroid.png" alt="Your Photo">
+          </div>
+          <div class="photo-wrapper">
+            <img class="photo" src="leda.jpg" alt="Your Photo">
+          </div>
+          <div class="photo-title"> Леда</div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div class="title flex flex-col gap-6 items-center">
+          <div data-aos="zoom-in" data-aos-duration="2100" class="">Влад + Леда</div>
+          <div data-aos="zoom-in" data-aos-duration="2100" class="text-7xl">=</div>
+            <div data-aos="fade-up" data-aos-duration="2100" ><img src="red_heart.png", style="width: 150px; height: 150px;"></div>
+          <div data-aos="fade-right" data-aos-duration="2100">Узнали?</div>
+        </div>
+        <div class="subtitle">
+          <div data-aos="fade-left" data-aos-duration="2100" class="px-12">Время пронеслось незаметно, и у этих двух милых деток скоро свадьба! <br>Да-да, мы сами в шоке!</div>
+        </div>
+        <div class="flex justify-center w-full">
+          <div class="polaroid-wrapper photo-animation">
+            <div style="z-index: 10;">
+              <img class="photo" src="polaroid.png" alt="Your Photo">
+            </div>
+            <div class="photo-wrapper">
+              <img class="photo" src="we.jpg" alt="Your Photo">
+            </div>
+            <div class="photo-title" style="inset: 78% auto; font-size: clamp(12px, 3vw, 22px);"> Сердца полны любви</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="fade-right" data-aos-duration="3000" class="title">Dорогие и любимые</div>
+        <div data-aos="fade-left" data-aos-duration="2100" class="subtitle">
+          <div class="px-12">Наша свадьба без вас не будет такой счастливой, уютной и веселой! <br>Приглашаем отметить этот день вместе с нами!</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-duration="2100" style="min-height: 101px; min-width: 261px; display: flex; background-image: url('circle.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+          <div class="title">14/08/2025</div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="zoom-in" data-aos-duration="3000"class="title">Программа дня</div>
+        <div>
+          <div class="grid grid-cols-[1fr_0.5fr_2fr] gap-4">
+            <div data-aos="fade-right" data-aos-duration="2100" class="table-title text-right">16:00</div>
+            <div data-aos="zoom-in" data-aos-duration="2100" class="flex text-center justify-center">
+              <img class="photo-animation" src="welcome.png" alt="" style="min-width: 45px; width: 50px; height: 50px;">
+            </div>
+            <div class="flex flex-col gap-2 text-start">
+              <p data-aos="fade-left" data-aos-duration="2100"class="table-title">Welcome</p>
+              <p data-aos="fade-right" data-aos-duration="2100" class="table-subtitle">Время пролетит незаметно за игристым и новыми знакомствами</p>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="2100" class="table-title text-right" >16:30</div>
+            <div data-aos="zoom-in" data-aos-duration="2100" class="flex text-center justify-center">
+              <img class="photo-animation" src="couple.png" alt="" style="min-width: 45px; width: 50px; height: 50px;">
+            </div>
+            <div class="flex flex-col gap-2 text-start">
+              <p data-aos="fade-left" data-aos-duration="2100" class="table-title" >Церемония</p>
+              <p data-aos="fade-right" data-aos-duration="2100" class="table-subtitle">Будем очень рады разделить этот важный момент с вами</p>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="2100" class="table-title text-right" >17:00</div>
+            <div data-aos="zoom-in" data-aos-duration="2100" class="flex text-center justify-center">
+              <img class="photo-animation" data-aos-duration="2100" src="cake.png" alt="" style="min-width: 45px; width: 50px; height: 50px;">
+            </div>
+            <div class="flex flex-col gap-2 text-start">
+              <p data-aos="fade-left" data-aos-duration="2100" class="table-title">Банкет</p>
+              <p data-aos="fade-right" data-aos-duration="2100" class="table-subtitle">Насладитесь этим вечером, будет много любви, танцев и веселья</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="zoom-in" data-aos-duration="3000" class="title">Место проведения</div>
+        <div class="flex justify-center w-full">
+          <div data-aos="fade-right" data-aos-duration="2100" class="polaroid-wrapper">
+            <div style="z-index: 10;">
+              <img class="photo" src="polaroid.png" alt="Your Photo">
+            </div>
+            <div class="photo-wrapper">
+              <img class="photo" src="royal.webp" alt="Your Photo">
+            </div>
+            <div style="font-size: clamp(16px, 3vw, 25px);" class="photo-title">"Royal Beach"</div>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2100" class="subtitle">
+          Мы ждем вас на берегу Финского залива
+        </div>
+        <a href="https://yandex.ru/maps/org/royal_beach/1028793374/?ll=30.231930%2C59.968912&z=16" 
+          data-aos="zoom-in" data-aos-duration="2100"
+          target="_blank" 
+          class="title button">
+          Построить маршрут
+        </a>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="zoom-in" data-aos-duration="3000" class="title">Dресс-код</div>
+        <div data-aos="fade-right" data-aos-duration="2100" class="subtitle">
+          Мы очень старались сделать праздник красивым и будем рады, если в своих нарядах вы поддержите цветовую гамму нашей свадьбы:
+        </div>
+        <div class="grid grid-cols-4 gap-3 w-full h-[22px]">
+          <div data-aos="zoom-in" data-aos-duration="2100" class="rounded-full" style="background-color: rgb(226, 207, 192);"></div>
+          <div data-aos="zoom-in" data-aos-duration="2100" data-aos-delay="100" class="rounded-full" style="background-color: rgb(236, 229, 195);"></div>
+          <div data-aos="zoom-in" data-aos-duration="2100" data-aos-delay="200" class="rounded-full" style="background-color: rgb(205, 212, 194);"></div>
+          <div data-aos="zoom-in" data-aos-duration="2100" data-aos-delay="300" class="rounded-full" style="background-color: rgb(200, 227, 240);"></div>
+        </div>
+        <div class="flex justify-center w-full">
+          <div data-aos="fade-left" data-aos-duration="2100" class="polaroid-wrapper">
+            <div style="z-index: 10;"><img class="photo" src="polaroid.png" alt="Your Photo"></div>
+            <div class="swiper photo-swiper-wrapper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="photo" src="for_her.jpg" alt="Your Photo"></div>
+                <div class="swiper-slide"><img class="photo" src="for_him.jpg" alt="Your Photo"></div>
+              </div>
+            </div>
+            <div class="swiper-button-prev" style="transform: rotate(-180deg); left: -30px;">
+              <img class="photo" src="right.png" alt="arrow left">
+            </div>
+            <div class="swiper-button-next" style="right: -30px;">
+              <img class="photo" src="right.png" alt="arrow right">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div class="flex gap-3 will-block flex items-center">
+          <div data-aos="fade-right" data-aos-duration="3000" class="title">Пожелания</div>
+          <img class="photo-animation" src="flower.png" alt="" style="width: 40px">
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2100" class="subtitle">
+          Сразу после свадьбы мы улетаем в свадебное путешествие, поэтому мы не успеем насладиться красотой подаренных цветов и будем рады, если вместо цветов вы решите подарить нам бутылочку хорошего вина или вашего любимого алкоголя.
+        </div>
+        <div class="flex justify-center w-full yellow-line">
+          <img class="photo" src="line.svg" alt="">
+        </div>
+        <div data-aos="fade-right" data-aos-duration="2100" class="subtitle">
+          Если хотите подарить нам ценный и нужный подарок, мы будем очень благодарны за вклад в бюджет нашей молодой семьи.
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="fade-left" data-aos-duration="3000" class="title">Анкета гостя</div>
+        <div data-aos="fade-right" data-aos-duration="2100" class="subtitle">
+          Просим вас ответить на несколько вопросов до 20 июля, это поможет нам в организации торжества.
+        </div>
+          <form
+            id="my-form"
+            data-aos="zoom-in" data-aos-duration="2100" 
+            class="w-full flex flex-col gap-5 text-start"
+            method="POST">
+            <label for="name">Ваше имя и фамилия:</label>
+            <input class="border-b border-gray-300" type="text" id="name" name="name" required>
+            
+            <div class="form-group flex flex-col gap-2">
+              <label>Сможете ли вы присутствовать?</label>
+              <div class="custom-radio">
+                  <input type="radio" id="yes" name="attendance" value="yes">
+                  <label for="yes">Смогу / сможем присутствовать</label>
+              </div>
+              <div class="custom-radio">
+                  <input type="radio" id="no" name="attendance" value="no">
+                  <label for="no">Затрудняюсь ответить, сообщу позже</label>
+              </div>
+              <div class="custom-radio">
+                  <input type="radio" id="maybe" name="attendance" value="maybe">
+                  <label for="maybe">Не смогу прийти</label>
+              </div>
+            </div>
+            
+            <div class="form-group flex flex-col gap-2">
+              <label>
+                Какой алкоголь предпочитаете?
+                <p class="text-sm text-gray-400">можно выбрать несколько вариантов</p>
+              </label>
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="wine" name="alcohol" value="wine">
+                  <label for="wine">Вино</label>
+              </div>
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="champagne" name="alcohol" value="champagne">
+                  <label for="champagne">Шампанское</label>
+              </div>
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="vodka" name="alcohol" value="vodka">
+                  <label for="vodka">Водка</label>
+              </div>
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="whiskey" name="alcohol" value="whiskey">
+                  <label for="whiskey">Виски</label>
+              </div>
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="none" name="alcohol" value="none">
+                  <label for="none">Не пью</label>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <button id="my-form-button" type="submit" class="title button">Отправить</button>
+            </div>
+          </form>
+          <div id="my-form-status"></div>
+          <div id="form-submitted" class="hidden p-5 text-white" style="background-color: #253759;">
+            <p>Спасибо, за ваши ответы. До встречи!</p>
+          </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div class="flex gap-3 flex items-center">
+          <div data-aos="fade-right" data-aos-duration="3000" class="title">Контакты</div>
+          <img class="telegram-animation" src="telegram.png" alt="" style="width: 40px">
+        </div>
+        <div data-aos="fade-left" data-aos-duration="2100" class="subtitle">
+          Если вы приготовили для нас сюрприз, не забудьте предупредить об этом нашего свадебного организатора
+        </div>
+        <div  data-aos="fade-right" data-aos-duration="2100"  class="title" style="font-size: clamp(14px, 3vw, 18px);">
+          <a href="tel:+79880832362">Алена: +7 911 919 96 95</a>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-8 items-center">
+        <div data-aos="zoom-in" data-aos-duration="3000" class="title">Будем вас ждать!</div>
+        <div data-aos="fade-up" data-aos-duration="2100" ><img class="red-heart" src="red_heart.png", style="width: 120px; height: 120px;"></div>
+        <div class="flex justify-center w-full">
+          <div class="polaroid-wrapper photo-animation">
+            <div style="z-index: 10;">
+              <img class="photo" src="polaroid.png" alt="Your Photo">
+            </div>
+            <div class="photo-wrapper">
+              <img class="photo" src="we.jpg" alt="Your Photo">
+            </div>
+            <div class="photo-title" style="inset: 78% auto; font-size: clamp(12px, 3vw, 13px);"> С большой любовью, <br>Влад и Леда</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+    // document.getElementById("my-form").addEventListener("submit", function(event) {
+    //   event.preventDefault(); // Останавливаем стандартную отправку формы
+    //   document.getElementById("form-submitted").classList.remove("hidden")
+    //   document.getElementById("my-form").classList.add("hidden")
+    // });
+// form
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById("form-submitted").classList.remove("hidden")
+          document.getElementById("my-form").classList.add("hidden")
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+        setTimeout(() => {
+          document.querySelector('.typing').style.borderRight = 'none'; // Убираем курсор после печатания
+            setTimeout(() => {
+              document.getElementById('loading-screen').classList.add('hidden');
+              setTimeout(() => {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').classList.remove('hidden');
+              }, 1000);
+            }, 2000); // Оставляем текст на экране на 2 секунды после печатания
+        }, 3000); // Время печатания текста 3 sec
+        const swiper = new Swiper('.swiper', {
+          direction: 'horizontal',
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }
+        });
+        AOS.init();
+    </script>
+</body>
+</html>

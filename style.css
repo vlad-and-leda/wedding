@@ -1,0 +1,367 @@
+
+html, body {
+  overflow: auto; /* Это разрешит прокрутку */
+}
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Comic Sans MS', cursive, sans-serif; */
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    color: #253759;
+}
+.container {
+    width: 100%;                 /* Растягивает контейнер на всю ширину */
+    max-width: 850px;           /* Ограничивает максимальную ширину */
+    margin: 0 auto;              /* Выравнивание по центру */
+    padding: 40px;               /* Отступы внутри контейнера */
+    display: flex;               /* Используем flexbox для выравнивания содержимого */
+    flex-direction: column;      /* Элементы будут располагаться вертикально */
+    justify-content: center;     /* Выравнивание по вертикали */
+    align-items: center;         /* Выравнивание по горизонтали */
+    background-color: white;     /* Белый фон */
+    overflow: hidden;            /* Скрытие содержимого, выходящего за границы */
+}
+@font-face {
+  font-family: 'PIPS';
+  src: url('child_font.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FONTS */
+.yomogi-regular {
+  font-family: "Yomogi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.hachi-maru-pop-regular {
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.klee-one-regular {
+  font-family: "Klee One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* FONTS */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 100;
+}
+.typing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid #253759;
+    color: #253759;
+    font-size: 18px;
+    font-weight: 400;
+    animation: typing 2s steps(12, end) forwards, blink 0.7s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+.heart-animation {
+    font-size: 2em;
+    animation: heartbeat 1s infinite;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.main-content {
+    opacity: 1;
+    transition: opacity 1s;
+}
+.polaroid-wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.photo-frame {
+    position: absolute;
+    width: 350px;
+    z-index: 2;
+}
+.photo-wrapper {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  right: 0;
+  bottom: 41px;
+  overflow: hidden;
+  z-index: 1;
+  width: 77%;
+  height: 69%;
+}
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем фото так, чтобы оно заполнило рамку */
+}
+.photo-title {
+  font-family: "Hachi Maru Pop", cursive;
+  position: absolute;
+  inset: 80% auto;
+  z-index: 20;
+  font-size: clamp(12px, 3vw, 30px);
+  padding: 0 30px;
+}
+.left-photo-animation {
+  margin-bottom: 95px;
+  animation: photoShakeLeft 3s infinite alternate ease-in-out;
+}
+.right-photo-animation {
+  margin-top: 95px;
+  animation: photoShakeRight 3s infinite alternate ease-in-out;
+}
+.photo-animation {
+  animation: photoShake 3s infinite alternate ease-in-out;
+}
+.red-heart {
+  animation: heartShake 2s infinite alternate ease-in-out;
+}
+.telegram-animation {
+  animation: telegramShake 2s infinite alternate ease-in-out;
+}
+
+@keyframes telegramShake {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
+
+@keyframes heartShake {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
+@keyframes photoShake {
+    from { transform: rotate(-10deg); }
+    to { transform: rotate(-7deg); }
+}
+
+@keyframes photoShakeLeft {
+    from { transform: rotate(-10deg); }
+    to { transform: rotate(-7deg); }
+}
+
+@keyframes photoShakeRight {
+    from { transform: rotate(10deg); }
+    to { transform: rotate(7deg); }
+}
+@keyframes rotate {
+  from { transform: rotate(-5deg); }
+  to { transform: rotate(5deg); }
+}
+.title {
+  font-family: "PIPS";
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(30px, 3vw, 48px);
+  margin: auto;
+}
+.subtitle {
+  padding: 0 90px;
+  font-weight: 300;
+  color: #253759;
+  line-height: 34px;
+  font-size: clamp(18px, 3vw, 22px);
+}
+.table-title {
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(18px, 3vw, 30px);
+}
+.table-subtitle {
+  font-weight: 300;
+  color: #253759;
+  font-size: clamp(14px, 3vw, 20px);
+}
+.photo-swiper-wrapper {
+  position: absolute;
+  top: 10%;
+  overflow: hidden;
+  z-index: 1;
+  width: 77%;
+  height: 69%;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+    width: 43px;
+    height: 24px;
+    position: absolute;
+}
+.custom-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-radio input {
+    display: none; /* Скрываем стандартный инпут */
+}
+
+.custom-radio label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Внешний круг */
+.custom-radio label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #253759; /* Цвет рамки */
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Добавляем черную точку внутри при выборе */
+.custom-radio input:checked + label::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #253759; /* Цвет точки */
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+}
+        /* Кастомные чекбоксы */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-checkbox input {
+    display: none; /* Скрываем стандартный чекбокс */
+}
+
+.custom-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Внешний квадрат */
+.custom-checkbox label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #253759; /* Цвет рамки */
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 8px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Галочка внутри при выборе */
+.custom-checkbox input:checked + label::after {
+    content: "✓";
+    font-size: 16px;
+    color: #253759;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+.button {
+  background-color: #a8c4dc;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid #a8c4dc;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #fff;
+  color: #a8c4dc;
+}
+.yellow-line {
+  padding: 0 90px;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.show {
+  display: flex;
+}
+
+@media (max-width: 642px) {
+  .subtitle {
+    padding: 0 0;
+  }
+  .subtitle div {
+    padding: 0 0;
+  }
+  .yellow-line {
+    padding: 0 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 378px) {
+  .will-block {
+    flex-direction: column;
+  }
+}
