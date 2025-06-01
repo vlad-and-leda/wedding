@@ -197,7 +197,6 @@
             method="POST">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://vlad-and-leda.github.io/wedding">
             <label for="name">Ваше имя и фамилия:</label>
             <input class="border-b border-gray-300" type="text" id="name" name="name" required>
             
@@ -290,16 +289,20 @@
     // });
 // form
     var form = document.getElementById("my-form");
-    
+
     async function handleSubmit(event) {
-      var status = document.getElementById("my-form-status");
       var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
+      fetch("https://formsubmit.co/ajax/9d062ee179c87b9e59ca402cc0deca8b", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
-        }
+        },
+        body: JSON.stringify({
+            name: data.get("name"),
+            attendance: data.get("attendance"),
+            alcohol: data.get("alcohol")
+        })
       }).then(response => {
         if (response.ok) {
           document.getElementById("form-submitted").classList.remove("hidden")
