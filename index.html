@@ -193,7 +193,6 @@
             id="my-form"
             data-aos="zoom-in" data-aos-duration="2100" 
             class="w-full flex flex-col gap-5 text-start"
-            action="https://formsubmit.co/9d062ee179c87b9e59ca402cc0deca8b"
             method="POST">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
@@ -291,7 +290,8 @@
     var form = document.getElementById("my-form");
 
     async function handleSubmit(event) {
-      var data = new FormData(event.target);
+      event.preventDefault()
+      var data = new FormData(event.target)
       fetch("https://formsubmit.co/ajax/9d062ee179c87b9e59ca402cc0deca8b", {
         method: "POST",
         headers: { 
