@@ -255,20 +255,20 @@
 
       <section class="flex flex-col gap-8 items-center">
         <div class="flex gap-3 flex items-center">
-          <div data-aos="fade-right" data-aos-duration="3000" class="title">Контакты</div>
+          <div class="title">Контакты</div>
           <img class="telegram-animation" src="https://res.cloudinary.com/dh7q4vkr1/image/upload/v1748772791/telegram_hhbpol.png" alt="" style="width: 40px">
         </div>
-        <div data-aos="fade-left" data-aos-duration="2100" class="subtitle">
+        <div class="subtitle">
           Если вы приготовили для нас сюрприз, не забудьте предупредить об этом нашего свадебного организатора
         </div>
-        <div  data-aos="fade-right" data-aos-duration="2100"  class="title" style="font-size: clamp(14px, 3vw, 18px);">
+        <div class="title" style="font-size: clamp(14px, 3vw, 18px);">
           <a href="tel:+79880832362">Алена: +7 911 919 96 95</a>
         </div>
       </section>
 
       <section class="flex flex-col gap-8 items-center">
-        <div data-aos="zoom-in" data-aos-duration="3000" class="title">Будем вас ждать!</div>
-        <div data-aos="fade-up" data-aos-duration="2100" ><img class="red-heart" src="https://res.cloudinary.com/dh7q4vkr1/image/upload/v1748771589/red_heart_cmjiia.png", style="width: 120px; height: 120px;"></div>
+        <div class="title">Будем вас ждать!</div>
+        <div><img class="red-heart" src="https://res.cloudinary.com/dh7q4vkr1/image/upload/v1748771589/red_heart_cmjiia.png", style="width: 120px; height: 120px;"></div>
         <div class="flex justify-center w-full">
           <div class="polaroid-wrapper photo-animation">
             <div style="z-index: 10;">
@@ -293,6 +293,9 @@
 
     async function handleSubmit(event) {
       const loading = document.getElementById('form-loading');
+      const form = document.getElementById('my-form');
+
+      form.classList.add('hidden');
       loading.classList.remove('hidden');
       event.preventDefault()
       var data = new FormData(event.target)
@@ -308,22 +311,11 @@
             alcohol: data.get("alcohol")
         })
       }).then(response => {
-        if (response.ok) {
-          document.getElementById("form-submitted").classList.remove("hidden")
-          document.getElementById("my-form").classList.add("hidden")
-          loading.classList.add('hidden');
-        } else {
-          loading.classList.add('hidden');
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
+        document.getElementById("form-submitted").classList.remove("hidden")
+        document.getElementById("my-form").classList.add("hidden")
+        loading.classList.add('hidden')
       }).catch(error => {
-        loading.classList.add('hidden');
+        loading.classList.add('hidden')
         status.innerHTML = "Oops! There was a problem submitting your form"
       });
     }
