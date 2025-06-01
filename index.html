@@ -283,12 +283,6 @@
       </section>
     </div>
     <script>
-    // document.getElementById("my-form").addEventListener("submit", function(event) {
-    //   event.preventDefault(); // Останавливаем стандартную отправку формы
-    //   document.getElementById("form-submitted").classList.remove("hidden")
-    //   document.getElementById("my-form").classList.add("hidden")
-    // });
-// form
     var form = document.getElementById("my-form");
 
     async function handleSubmit(event) {
@@ -321,9 +315,9 @@
     }
     form.addEventListener("submit", handleSubmit)
 
-    // document.addEventListener("DOMContentLoaded", function () {
-    //   window.scrollTo({ top: 0, behavior: "smooth" });
-    // });
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
     setTimeout(() => {
       document.querySelector('.typing').style.borderRight = 'none'; // Убираем курсор после печатания
@@ -333,8 +327,8 @@
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('main-content').classList.remove('hidden');
           }, 1000);
-        }, 0); // Оставляем текст на экране на 2 секунды после печатания
-    }, 0); // Время печатания текста 3 sec
+        }, 2000); // Оставляем текст на экране на 2 секунды после печатания
+    }, 3000); // Время печатания текста 3 sec
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
