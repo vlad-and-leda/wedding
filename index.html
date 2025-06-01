@@ -195,6 +195,8 @@
             class="w-full flex flex-col gap-5 text-start"
             action="https://formsubmit.co/9d062ee179c87b9e59ca402cc0deca8b"
             method="POST">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <label for="name">Ваше имя и фамилия:</label>
             <input class="border-b border-gray-300" type="text" id="name" name="name" required>
             
@@ -316,32 +318,32 @@
     }
     form.addEventListener("submit", handleSubmit)
 
-    document.addEventListener("DOMContentLoaded", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   window.scrollTo({ top: 0, behavior: "smooth" });
+    // });
 
+    setTimeout(() => {
+      document.querySelector('.typing').style.borderRight = 'none'; // Убираем курсор после печатания
         setTimeout(() => {
-          document.querySelector('.typing').style.borderRight = 'none'; // Убираем курсор после печатания
-            setTimeout(() => {
-              document.getElementById('loading-screen').classList.add('hidden');
-              setTimeout(() => {
-                document.getElementById('loading-screen').style.display = 'none';
-                document.getElementById('main-content').classList.remove('hidden');
-              }, 1000);
-            }, 2000); // Оставляем текст на экране на 2 секунды после печатания
-        }, 3000); // Время печатания текста 3 sec
-        const swiper = new Swiper('.swiper', {
-          direction: 'horizontal',
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }
-        });
-        AOS.init();
+          document.getElementById('loading-screen').classList.add('hidden');
+          setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+          }, 1000);
+        }, 0); // Оставляем текст на экране на 2 секунды после печатания
+    }, 0); // Время печатания текста 3 sec
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+    AOS.init();
     </script>
 </body>
 </html>
