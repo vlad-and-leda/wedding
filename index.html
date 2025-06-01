@@ -193,6 +193,7 @@
             id="my-form"
             data-aos="zoom-in" data-aos-duration="2100" 
             class="w-full flex flex-col gap-5 text-start"
+            action="https://formsubmit.co/prettyflackojoy@gmail.com"
             method="POST">
             <label for="name">Ваше имя и фамилия:</label>
             <input class="border-b border-gray-300" type="text" id="name" name="name" required>
@@ -288,7 +289,6 @@
     var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
-      event.preventDefault();
       var status = document.getElementById("my-form-status");
       var data = new FormData(event.target);
       fetch(event.target.action, {
