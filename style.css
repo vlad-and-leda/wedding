@@ -344,6 +344,19 @@ body {
   display: flex;
 }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @media (max-width: 642px) {
   .subtitle {
     padding: 0 0;

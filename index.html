@@ -245,8 +245,10 @@
               <button id="my-form-button" type="submit" class="title button">Отправить</button>
             </div>
           </form>
-          <div id="my-form-status"></div>
-          <div id="form-submitted" class="hidden p-5 text-white" style="background-color: #253759;">
+          <div id="form-loading" class="">
+            <div class="spinner"></div>
+          </div>
+          <div id="form-submitted" class="hidden p-5 text-white" data-aos="fade-up" data-aos-duration="2100" style="background-color: #253759;">
             <p>Спасибо, за ваши ответы. До встречи!</p>
           </div>
       </section>
@@ -290,6 +292,8 @@
     var form = document.getElementById("my-form");
 
     async function handleSubmit(event) {
+      const loading = document.getElementById('form-loading');
+      loading.classList.remove('hidden');
       event.preventDefault()
       var data = new FormData(event.target)
       fetch("https://formsubmit.co/ajax/9d062ee179c87b9e59ca402cc0deca8b", {
@@ -307,7 +311,9 @@
         if (response.ok) {
           document.getElementById("form-submitted").classList.remove("hidden")
           document.getElementById("my-form").classList.add("hidden")
+          loading.classList.add('hidden');
         } else {
+          loading.classList.add('hidden');
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
               status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
@@ -317,6 +323,7 @@
           })
         }
       }).catch(error => {
+        loading.classList.add('hidden');
         status.innerHTML = "Oops! There was a problem submitting your form"
       });
     }
