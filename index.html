@@ -296,7 +296,7 @@
         body: JSON.stringify({
             name: data.get("name"),
             attendance: data.get("attendance"),
-            alcohol: data.get("alcohol")
+            alcohol: data.getAll("alcohol")
         })
       }).then(response => {
         document.getElementById("form-submitted").classList.remove("hidden")
